@@ -1,0 +1,231 @@
+/**
+ * ====================================================================
+ * @watermark Ritam // iOS Liquid Glass & Safe-Area Design System
+ * @author Ritam (@ritam)
+ * ====================================================================
+ */
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --font-display: "Bricolage Grotesque", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Light Mode (Frosted Pearl Liquid Glass on Sunlit Alabaster) */
+  --canvas-bg: #f3f5fa;
+  --canvas-secondary: #e8ecf4;
+  --glass-bg: rgba(255, 255, 255, 0.72);
+  --glass-bg-elevated: rgba(255, 255, 255, 0.88);
+  --glass-border: rgba(15, 23, 42, 0.09);
+  --glass-hairline: rgba(15, 23, 42, 0.08);
+  --glass-specular-top: rgba(255, 255, 255, 0.92);
+  --glass-specular-bottom: rgba(15, 23, 42, 0.05);
+  --glass-shadow: 0 18px 42px -14px rgba(15, 23, 42, 0.11);
+  --text-primary: #0b1120;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --accent: #0284c7;
+  --accent-soft: rgba(2, 132, 199, 0.12);
+  --accent-contrast: #ffffff;
+  --spotlight-glow: rgba(2, 132, 199, 0.11);
+
+  /* Configurable Liquid Glass Physics */
+  --glass-blur: 22px;
+  --glass-saturate: 180%;
+}
+
+.dark {
+  /* Dark Mode (LastWave Obsidian Translucent Liquid Glass) */
+  --canvas-bg: #07090e;
+  --canvas-secondary: #0d121d;
+  --glass-bg: rgba(15, 20, 32, 0.56);
+  --glass-bg-elevated: rgba(18, 24, 38, 0.84);
+  --glass-border: rgba(255, 255, 255, 0.13);
+  --glass-hairline: rgba(255, 255, 255, 0.09);
+  --glass-specular-top: rgba(255, 255, 255, 0.34);
+  --glass-specular-bottom: rgba(255, 255, 255, 0.05);
+  --glass-shadow: 0 24px 54px -16px rgba(0, 0, 0, 0.62);
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --accent: #38bdf8;
+  --accent-soft: rgba(56, 189, 248, 0.15);
+  --accent-contrast: #06101b;
+  --spotlight-glow: rgba(255, 255, 255, 0.09);
+}
+
+html {
+  font-family: var(--font-body);
+  background-color: var(--canvas-bg);
+  color: var(--text-primary);
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: var(--canvas-bg);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  transition: background-color 200ms cubic-bezier(0.16, 1, 0.3, 1),
+    color 200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark body {
+  letter-spacing: 0.008em;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-mono-tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Safe-Area Notch & Dynamic Island Utilities */
+.safe-shell {
+  padding-left: max(1rem, env(safe-area-inset-left));
+  padding-right: max(1rem, env(safe-area-inset-right));
+}
+
+@media (min-width: 640px) {
+  .safe-shell {
+    padding-left: max(1.5rem, env(safe-area-inset-left));
+    padding-right: max(1.5rem, env(safe-area-inset-right));
+  }
+}
+
+@media (min-width: 1024px) {
+  .safe-shell {
+    padding-left: max(2.5rem, env(safe-area-inset-left));
+    padding-right: max(2.5rem, env(safe-area-inset-right));
+  }
+}
+
+.pt-safe-top {
+  padding-top: max(0.875rem, env(safe-area-inset-top));
+}
+
+.pb-safe-bottom {
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+}
+
+.pb-mobile-dock-clearance {
+  padding-bottom: calc(5.25rem + env(safe-area-inset-bottom));
+}
+
+@media (min-width: 768px) {
+  .pb-mobile-dock-clearance {
+    padding-bottom: max(3rem, env(safe-area-inset-bottom));
+  }
+}
+
+/* iOS 26 / LastWave Translucent Liquid Glass Surface */
+.liquid-glass {
+  position: relative;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  box-shadow:
+    inset 0 1px 0 0 var(--glass-specular-top),
+    inset 0 -1px 0 0 var(--glass-specular-bottom),
+    var(--glass-shadow);
+  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+}
+
+/* Interactive Chromium SVG Optical Lens Refraction on Hover */
+@supports (backdrop-filter: url(#ritam-liquid-refraction)) {
+  .liquid-glass-refractive:hover {
+    backdrop-filter: url(#ritam-liquid-refraction) blur(var(--glass-blur))
+      saturate(var(--glass-saturate));
+  }
+}
+
+.liquid-glass-elevated {
+  background: var(--glass-bg-elevated);
+  border: 1px solid var(--glass-border);
+  box-shadow:
+    inset 0 1px 0 0 var(--glass-specular-top),
+    var(--glass-shadow);
+  backdrop-filter: blur(calc(var(--glass-blur) * 1.25)) saturate(190%);
+  -webkit-backdrop-filter: blur(calc(var(--glass-blur) * 1.25)) saturate(190%);
+}
+
+/* Tactile iOS Spring Press Micro-Interaction (<= 160ms compositor-only) */
+.ios-pressable {
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ios-pressable:active {
+  transform: scale(0.975);
+}
+
+/* Custom Range Slider for LastWave Audio & Glass Physics */
+input[type="range"].liquid-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"].liquid-slider::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 9999px;
+  background: var(--glass-hairline);
+}
+
+input[type="range"].liquid-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 9999px;
+  background: var(--accent);
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 140ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+input[type="range"].liquid-slider:active::-webkit-slider-thumb {
+  transform: scale(1.18);
+}
+
+@keyframes ritamBlurReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+    filter: blur(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.animate-blur-word {
+  animation: ritamBlurReveal 190ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: var(--word-delay, 0ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "_watermark": "Ritam // Signature iOS Liquid Glass Portfolio — Edit this config.json directly to customize your site without touching code.",
+  "meta": {
+    "siteTitle": "Ritam",
+    "siteDescription": "Minimalist guns.lol style bio & portfolio by Ritam"
+  },
+  "profile": {
+    "name": "Ritam",
+    "handle": "@trixxexe",
+    "badge": "Developer",
+    "status": "Available for projects",
+    "bio": "Building sleek web tools, interfaces & open source.",
+    "location": "India",
+    "avatarUrl": "./assets/ritam-avatar.svg",
+    "bannerUrl": "./assets/ritam-banner.png",
+    "logoUrl": "./assets/custom-logo.svg"
+  },
+  "audio": {
+    "enabled": true,
+    "title": "Velvet Refraction",
+    "artist": "Ritam",
+    "album": "Studio Tape",
+    "audioUrl": "",
+    "coverUrl": "preset:project-audio"
+  },
+  "socials": [
+    {
+      "id": "github",
+      "label": "GitHub",
+      "handle": "@trixxexe",
+      "url": "https://github.com/trixxexe",
+      "icon": "github",
+      "action": "external"
+    },
+    {
+      "id": "discord-1",
+      "label": "Discord",
+      "handle": "ritam.007",
+      "url": "ritam.007",
+      "icon": "discord",
+      "action": "copy"
+    },
+    {
+      "id": "discord-2",
+      "label": "Discord",
+      "handle": "witheredcry",
+      "url": "witheredcry",
+      "icon": "discord",
+      "action": "copy"
+    },
+    {
+      "id": "instagram",
+      "label": "Instagram",
+      "handle": "@ritam.zip",
+      "url": "https://instagram.com/ritam.zip",
+      "icon": "instagram",
+      "action": "external"
+    },
+    {
+      "id": "email",
+      "label": "Email",
+      "handle": "jyotirmoyghosh904@gmail.com",
+      "url": "jyotirmoyghosh904@gmail.com",
+      "icon": "mail",
+      "action": "copy"
+    }
+  ],
+  "projects": [
+    {
+      "id": "flowave",
+      "title": "FloWave",
+      "description": "Android liquid glass music player with offline playback and online AI integration. Built with Kotlin and Jetpack Compose.",
+      "tags": ["Kotlin", "JetpackCompose", "Android", "Audio"],
+      "url": "https://github.com/trixxexe/FloWave-app",
+      "imageUrl": "preset:project-audio",
+      "stars": 1
+    },
+    {
+      "id": "coderot",
+      "title": "coderot",
+      "description": "Code checker website that audits dead code and grades GitHub repositories. Completely free with PAT token support.",
+      "tags": ["TypeScript", "React", "DevTools"],
+      "url": "https://github.com/trixxexe/coderot",
+      "imageUrl": "preset:project-prism",
+      "stars": 1
+    },
+    {
+      "id": "devaudit",
+      "title": "devaudit",
+      "description": "Automated security audit tool for GitHub repositories checking for leaked API keys, dead endpoints, and README health.",
+      "tags": ["TypeScript", "Security", "GitHub"],
+      "url": "https://github.com/trixxexe/devaudit",
+      "imageUrl": "preset:project-kinetix",
+      "stars": 0
+    },
+    {
+      "id": "devcard-cards",
+      "title": "devcard-cards",
+      "description": "Developer profile card maker with custom aesthetics and shareable social embeds.",
+      "tags": ["TypeScript", "UI", "Aesthetics"],
+      "url": "https://github.com/trixxexe/devcard-cards",
+      "imageUrl": "preset:project-prism",
+      "stars": 0
+    },
+    {
+      "id": "gitboard",
+      "title": "gitboard",
+      "description": "Visually rich, keyboard-driven Terminal User Interface (TUI) client for GitHub repositories and notifications.",
+      "tags": ["Python", "TUI", "CLI"],
+      "url": "https://github.com/trixxexe/gitboard",
+      "imageUrl": "preset:project-kinetix",
+      "stars": 2
+    },
+    {
+      "id": "logdiver",
+      "title": "logdiver",
+      "description": "Beautiful, high-speed keyboard-driven TUI log file explorer for terminal power users.",
+      "tags": ["Python", "TUI", "Linux"],
+      "url": "https://github.com/trixxexe/logdiver",
+      "imageUrl": "preset:project-prism",
+      "stars": 1
+    },
+    {
+      "id": "lyrafetcher",
+      "title": "lyrafetcher",
+      "description": "Aesthetic interactive CLI lyrics fetcher and embedder with synchronized web hub.",
+      "tags": ["Python", "CLI", "Audio"],
+      "url": "https://github.com/trixxexe/lyrafetcher",
+      "imageUrl": "preset:project-audio",
+      "stars": 0
+    },
+    {
+      "id": "cli-dl",
+      "title": "cli-dl",
+      "description": "Modular terminal-aesthetic YouTube downloader using yt-dlp, Rich styling, and interactive prompts.",
+      "tags": ["Python", "yt-dlp", "CLI"],
+      "url": "https://github.com/trixxexe/cli-dl",
+      "imageUrl": "preset:project-kinetix",
+      "stars": 0
+    },
+    {
+      "id": "ghosttype",
+      "title": "ghosttype",
+      "description": "Typing simulation suite for developers and writers that models human keystroke errors and fallbacks.",
+      "tags": ["TypeScript", "Web", "Simulation"],
+      "url": "https://github.com/trixxexe/ghosttype",
+      "imageUrl": "preset:project-prism",
+      "stars": 0
+    },
+    {
+      "id": "nvidia-ai-webui",
+      "title": "NVIDIA-api-AI-WebUI",
+      "description": "Web-based AI client for NVIDIA models with persistent local storage caching and zero-install setup.",
+      "tags": ["JavaScript", "HTML", "AI"],
+      "url": "https://github.com/trixxexe/NVIDIA-api-AI-WebUI",
+      "imageUrl": "preset:project-kinetix",
+      "stars": 1
+    },
+    {
+      "id": "playfonts",
+      "title": "playfonts",
+      "description": "Interactive typography playground rendering custom text across 500+ Google Fonts simultaneously.",
+      "tags": ["TypeScript", "Typography", "Design"],
+      "url": "https://github.com/trixxexe/playfonts",
+      "imageUrl": "preset:project-prism",
+      "stars": 0
+    },
+    {
+      "id": "spectre-toolkit",
+      "title": "SPECTRE-Toolkit",
+      "description": "Curated collection of OSINT investigation tools, scanners, and recon automation scripts.",
+      "tags": ["Python", "OSINT", "Security"],
+      "url": "https://github.com/trixxexe/SPECTRE-Toolkit",
+      "imageUrl": "preset:project-kinetix",
+      "stars": 1
+    },
+    {
+      "id": "tasktracker",
+      "title": "TaskTracker-App",
+      "description": "Modern habit and task management application built for high daily focus.",
+      "tags": ["Kotlin", "Android", "Productivity"],
+      "url": "https://github.com/trixxexe/TaskTracker-App",
+      "imageUrl": "preset:project-audio",
+      "stars": 1
+    },
+    {
+      "id": "azureai-cli",
+      "title": "AzureAI-CLI",
+      "description": "Terminal-based AI chat client for NVIDIA API with dual CLI and interactive TUI modes.",
+      "tags": ["Python", "AI", "CLI"],
+      "url": "https://github.com/trixxexe/AzureAI-CLI",
+      "imageUrl": "preset:project-kinetix",
+      "stars": 0
+    }
+  ],
+  "theme": {
+    "mode": "auto",
+    "preset": "obsidian-ice",
+    "customAccent": "",
+    "glassBlurPx": 22,
+    "glassRefractionScale": 16,
+    "glassSpecular": 0.36,
+    "hapticsEnabled": true,
+    "clickSparkEnabled": true,
+    "cardTiltEnabled": true
+  },
+  "cloudSync": {
+    "enabled": true,
+    "provider": "built-in",
+    "syncKey": "ritam-profile"
+  }
+}

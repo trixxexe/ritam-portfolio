@@ -1,0 +1,61 @@
+<!doctype html>
+<!--
+  ====================================================================
+  WATERMARK: Ritam // Signature iOS Liquid Glass Portfolio
+  Author & Owner: Ritam (@ritam)
+  Edit public/config.json to customize content, assets, and themes
+  without touching source code.
+  ====================================================================
+-->
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#07090e" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f4f6fa" />
+    <title>Ritam — Liquid Glass Portfolio</title>
+    <meta
+      name="description"
+      content="Minimalist iOS Liquid Glass creator portfolio and bio hub with config.json customization, tactile haptics, LastWave translucent audio deck, and cross-device cloud sync."
+    />
+    <meta property="og:title" content="Ritam — Liquid Glass Portfolio" />
+    <meta
+      property="og:description"
+      content="Minimalist iOS Liquid Glass creator portfolio and bio hub with config.json customization, tactile haptics, LastWave translucent audio deck, and cross-device cloud sync."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="./assets/custom-logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('ritam_theme_mode');
+          var prefersDark =
+            window.matchMedia &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var isDark =
+            saved === 'dark' ||
+            ((!saved || saved === 'auto') && (prefersDark !== false));
+          if (saved === 'light') isDark = false;
+          document.documentElement.classList.toggle('dark', isDark);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="antialiased selection:bg-sky-500/25">
+    <div id="root" data-ritam-watermark="Ritam"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

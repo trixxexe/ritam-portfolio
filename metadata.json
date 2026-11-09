@@ -1,0 +1,6 @@
+{
+  "name": "Ritam — Liquid Glass Portfolio",
+  "description": "Minimalist iOS Liquid Glass creator portfolio and bio hub with config.json customization, tactile haptics, LastWave translucent audio deck, and cross-device cloud sync.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
